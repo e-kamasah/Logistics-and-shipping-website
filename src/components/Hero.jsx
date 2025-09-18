@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 export const Hero = ({
   title = "Fast & Reliable Delivery",
   subtitle = "BlueAnchor Shipping and Logistics",
@@ -9,7 +9,7 @@ export const Hero = ({
 }) => {
   return (
     <div
-      className="relative  overflow-hidden"
+      className="relative  overflow-hidden min-h-[calc(100vh-64px)] pt-20"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -20,7 +20,7 @@ export const Hero = ({
       <div className="absolute inset-0  bg-opacity-50"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center min-h-screen pt-16">
+      <div className="relative z-10 flex items-center  pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-blue-200 text-sm md:text-base font-medium mb-4 tracking-wide uppercase">
@@ -37,13 +37,15 @@ export const Hero = ({
 
             {showTrackButton && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <Link to="/track">
+                <button className="group bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                   <span>Track Your Package</span>
                   <ArrowRight
                     size={20}
                     className="group-hover:translate-x-1 transition-transform duration-200"
                   />
                 </button>
+                 </Link>
               </div>
             )}
           </div>

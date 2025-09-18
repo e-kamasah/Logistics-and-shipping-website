@@ -17,9 +17,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand & Newsletter Section */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">Logistik</h2>
+            <h2 className="text-2xl font-bold mb-4">BlueAnchor</h2>
             <p className="text-gray-400 mb-6 max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              No one does shipping like us since 1989
             </p>
             
             <div className="mb-8">
@@ -73,9 +73,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>+88018-340-89301</li>
-              <li>mdsumonforjie@gmail.com</li>
-              <li>28 Street, New York City United States of America</li>
+              <li>+929 333-6413</li>
+              <li>info@blueanchorshipping.com</li>
+              <li>28 Street, Virginia, United States of America</li>
             </ul>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              Copyright © 2024 Logistik All rights reserved
+              Copyright © 2024 BlueAnchor All rights reserved
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-500">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>

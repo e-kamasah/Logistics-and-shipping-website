@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Hero from '../components/Hero';
-import { Truck, Plane, Package, Phone, CheckCircle } from 'lucide-react';
-
+import { Truck, Package, Phone, CheckCircle } from 'lucide-react';
+import ExcellenceSection from '../components/ExcellenceSection';
 export default function Homepage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,14 +23,7 @@ export default function Homepage() {
     console.log('Form submitted:', formData);
   };
 
-  const stats = [
-    { number: '20+', label: 'YEARS EXPERIENCE' },
-    { number: '500+', label: 'ACTIVE GLOBAL LOCATIONS' },
-    { number: '99.1%', label: 'ON-TIME DELIVERY RATE' },
-    { number: '120+', label: 'COUNTRIES COVERED' },
-    { number: '25M+', label: 'TONS TRANSPORTED ANNUALLY' },
-    { number: '200+', label: 'GLOBAL PARTNERS' }
-  ];
+ 
 
   const features = [
     {
@@ -56,103 +49,16 @@ export default function Homepage() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <Hero backgroundImage="/shipping-image.jpg" />
       
       {/* Excellence Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-4">
-            <span className="inline-block px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200">
-              CUSTOMER CENTRIC APPROACH
-            </span>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left side - Main content */}
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Experience Excellence with BlueAnchor Logistics
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                We prioritize precision, reliability, and a customer-centric approach, making 
-                your satisfaction our top priority. Experience the difference of a logistics 
-                partner committed to excellence - experience BlueAnchor Logistics.
-              </p>
-              
-              {/* Featured card */}
-              <div className="bg-slate-800 rounded-2xl p-8 text-white">
-                <div className="w-12 h-12 bg-blue-400 rounded-xl flex items-center justify-center mb-6">
-                  <Package className="w-6 h-6 text-slate-800" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">
-                  Innovative Solutions for the Future
-                </h3>
-                <p className="text-slate-300">
-                  Choose BlueAnchor Logistics for commitment, reliability, and seamless service. We 
-                  understand that your shipments are more than packages.
-                </p>
-              </div>
-            </div>
-            
-            {/* Right side - Service cards */}
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <Plane className="w-6 h-6 text-gray-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Comprehensive Range of Services
-                </h3>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-gray-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Trust is the backbone of our operations
-                </h3>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <Truck className="w-6 h-6 text-gray-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Unparalleled Expertise in Logistics
-                </h3>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <Phone className="w-6 h-6 text-gray-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Dedicated Customer Support
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ExcellenceSection />
 
       {/* Stats and Logistics Solutions Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+        
 
           {/* Transport Images */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -269,7 +175,7 @@ export default function Homepage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white mb-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Form */}
